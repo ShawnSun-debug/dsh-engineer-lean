@@ -1,0 +1,51 @@
+{
+  "name": "dsh-engineer-lean",
+  "version": "0.1.1",
+  "description": "Engineer lean 预设：精简·PTC v3 的省钱机制（0.25 压缩 / 8192 剪枝 / run_code 折叠）+ 8 个常驻 ds-* 技能与工程纪律，无 guard。技能自带 provider，可单包安装。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets/skills",
+    "skills.manifest.json",
+    "cordis.patch.yml",
+    "presets",
+    "scripts",
+    "test",
+    "README.md",
+    "CHANGELOG.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "ShawnSun-debug",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShawnSun-debug/dsh-engineer-lean.git"
+  },
+  "homepage": "https://github.com/ShawnSun-debug/dsh-engineer-lean#readme",
+  "bugs": {
+    "url": "https://github.com/ShawnSun-debug/dsh-engineer-lean/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build-bundle.mjs",
+    "drift": "node scripts/check-drift.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "agent-preset",
+    "engineer-lean",
+    "ptc",
+    "skills"
+  ]
+}

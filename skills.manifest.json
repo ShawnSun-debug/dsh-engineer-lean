@@ -1,0 +1,51 @@
+{
+  "purpose": "resident skill baseline for the engineer-lean pack: the same 8 ds-* skills as dsh-engineer-mode, carried here so this package installs alone.",
+  "source": "copied byte-for-byte from the installed dsh-engineer-mode 0.11.0 assets/skills",
+  "rank": 600,
+  "provider": "engineer-lean",
+  "precedence": "lower wins: project .dsh 100 < project .agents 200 < custom 300 < ~/.dsh/skills 400 < ~/.agents/skills 500 < this package 600",
+  "semantics": "overlay: a loose copy of the same name always wins; this package keeps the skill resident when the loose copy is missing",
+  "driftCheck": "scripts/check-drift.mjs compares these hashes with the installed dsh-engineer-mode copy (warn only)",
+  "skills": [
+    {
+      "name": "ds-blast-radius",
+      "description": "Find what a change breaks outside its own diff, then prove the key safety fact by running real code. Use before shipping risky or unfamiliar changes. /ds-blast-radius",
+      "sha256": "b97e4d6c3a93cb79d3db89acaeff7feaae8038f7117cb5a25095125cc9eda598"
+    },
+    {
+      "name": "ds-context-reset",
+      "description": "Keeps a PROGRESS.md for long tasks so a fresh session can resume. Use when a task spans sessions, the model repeats itself, or context is half full, or /ds-context-reset.",
+      "sha256": "8257003588c8eddf324bfcba68c70a426f76f7b0531db02679e89e6c86ac80ea"
+    },
+    {
+      "name": "ds-mode",
+      "description": "Working style for every coding task: restate, read before editing, one verified step at a time, evidence before claims. Use when starting work or when the run drifts. /ds-mode",
+      "sha256": "1c7d54f4431a62c00de63eed333d7a19275385c5a409c7373d2c0b5e06a3b659"
+    },
+    {
+      "name": "ds-plan-loop",
+      "description": "Numbered plan with an acceptance check per step, one critique pass, then execute step by step. Use for multi-file, unclear or previously bungled work. /ds-plan-loop",
+      "sha256": "aabb0d29b3b28828dfb517ac69c1729cbb3b362d67edca5aae4c98b64eacb9dd"
+    },
+    {
+      "name": "ds-principles",
+      "description": "Principles with triggers: sizing a diff, choosing types, debugging, testing, delegating. Use at structural decisions, not as a per-turn checklist. /ds-principles",
+      "sha256": "d372588d90da64896c6a24897171d0501326d60cc6e190e9ab989bfaac3b0105"
+    },
+    {
+      "name": "ds-tdd",
+      "description": "Write a focused failing test first, then the smallest change that passes. Use for bugs with a cheap local test target. Not for UI with no test seam. /ds-tdd",
+      "sha256": "487ba4dcd97facf2b03d620f76576699f696bb22cf66428cce1dbee7b03ddb0a"
+    },
+    {
+      "name": "ds-unstick",
+      "description": "Name the assumption behind the failed fixes, test it, list three other approaches, restart. Use after the same failure twice. /ds-unstick",
+      "sha256": "a4052d1b3bbf3f1a02f331d04f07faa583b2be9ef490b64e1ab3719ec20485e2"
+    },
+    {
+      "name": "ds-verify-loop",
+      "description": "Edit, run the narrowest real check, read the actual error, fix the cause, rerun; stop at 5 rounds. Use when a test, typecheck, build or app can prove the change. /ds-verify-loop",
+      "sha256": "9f5ad15b22f15c1a21f6651499c820182beb4f25468811614e38ef73bced0ea0"
+    }
+  ]
+}
